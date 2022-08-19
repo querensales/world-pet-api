@@ -7,6 +7,8 @@ namespace WorldPetApi.Entities
 {
     public class Usuario
     {
-        
+        public Guid Id { get; set; }
+
+        public string Login { get; set; }
     }
 }

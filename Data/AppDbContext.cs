@@ -8,7 +8,7 @@ namespace WorldPetApi.Data
         public DbSet<Usuario> Usuario { get; set; }
         public DbSet<Pet> Pet { get; set; }
         public DbSet<Cliente> Cliente { get; set; }
-        public DbSet<Especie>  Name { get; set; }
+        public DbSet<Especie>  Especie { get; set; }
         
         
 
