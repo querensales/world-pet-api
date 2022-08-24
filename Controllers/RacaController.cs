@@ -25,7 +25,7 @@ namespace WorldPetApi.Controllers
         [HttpGet("{IdEspecie}/buscar-racas")]
         public IActionResult BuscarRacas(Guid IdEspecie)
         {
-            var result = _dbContext.Raca.Where(r => r.IdEspecie == IdEspecie).ToList();
+            var result = _dbContext.Raca.Where(r => r.EspecieId == IdEspecie).ToList();
             return Ok(result);
         }
 
@@ -36,8 +36,9 @@ namespace WorldPetApi.Controllers
             var raca = new Raca
             {
                 Descricao = model.Nome,
-                IdEspecie = IdEspecie,
-                Id = Guid.NewGuid()
+                EspecieId = IdEspecie,
+                Id = Guid.NewGuid(),
+                Especie = null,
             };
 
             _dbContext.Add<Raca>(raca);

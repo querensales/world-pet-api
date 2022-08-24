@@ -12,8 +12,8 @@ namespace WorldPetApi.Entities
         public Guid Id { get; set; }
         public string Descricao { get; set; }
     
-        public Guid IdEspecie { get; set; }
-        public Especie Especie { get; set; }
+        public Guid EspecieId { get; set; }
+        public virtual Especie Especie { get; set; }
 
     }
 }

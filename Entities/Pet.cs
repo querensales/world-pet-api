@@ -11,13 +11,13 @@ namespace WorldPetApi.Entities
         
         public string Nome { get; set; }
 
-        public Guid IdEspecie { get; set; }        
-        public Especie Especie { get; set; }
+        public Guid EspecieId { get; set; }        
+        public virtual Especie Especie { get; set; }
         
-        public Guid IdRaca { get; set; }    
-        public Raca Raca { get; set; }
+        public Guid RacaId { get; set; }    
+        public virtual Raca Raca { get; set; }
 
-        public Guid IdCliente { get; set; }
-        public Cliente Cliente { get; set; }
+        public Guid ClienteId { get; set; }
+        public virtual Cliente Cliente { get; set; }
     }
 }

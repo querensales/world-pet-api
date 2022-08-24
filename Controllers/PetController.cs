@@ -26,7 +26,7 @@ namespace WorldPetApi.Controllers
         [HttpGet("{IdCliente}/buscar-todos")]
         public IActionResult Index(Guid IdCliente)
         {
-            var result = _dbContext.Pet.Where(p => p.IdCliente == IdCliente).ToList();
+            var result = _dbContext.Pet.Where(p => p.ClienteId == IdCliente).ToList();
             return Ok(result);
         }
 
@@ -41,9 +41,9 @@ namespace WorldPetApi.Controllers
         public IActionResult NovoPet(Guid IdCliente, [FromBody] PetModel model)
         {
             var pet = new Pet();
-            pet.IdCliente = IdCliente;
-            pet.IdEspecie = model.IdEspecie;
-            pet.IdRaca = model.IdRaca;
+            pet.ClienteId = IdCliente;
+            pet.EspecieId = model.IdEspecie;
+            pet.RacaId = model.IdRaca;
             pet.Nome = model.Nome;
             
             _dbContext.Add(pet);

@@ -11,6 +11,6 @@ namespace WorldPetApi.Entities
         
         public string Descricao { get; set; }
 
-        public ICollection<Raca> Raca { get; set; }
+        public virtual ICollection<Raca> Raca { get; set; }
     }
 }
