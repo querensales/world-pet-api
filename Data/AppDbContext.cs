@@ -8,11 +8,12 @@ namespace WorldPetApi.Data
         public DbSet<Usuario> Usuario { get; set; }
         public DbSet<Pet> Pet { get; set; }
         public DbSet<Cliente> Cliente { get; set; }
-        public DbSet<Especie>  Especie { get; set; }
-        
-        
+        public DbSet<Especie> Especie { get; set; }
+        public DbSet<Raca> Raca { get; set; }
 
-        
+
+
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("DataSource=app.db;Cache=Shared");
